@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--1.数据库路径
+2.映射配置文件路径
+3.实体类所在包路径-->
+
+<orm-factory>
+    <property name="connection.url">jdbc:mysql://localhost:3306/exodus?serverTimezone=CTT&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;allowMultiQueries=true</property>
+    <property name="connection.driverClass">com.mysql.cj.jdbc.Driver</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">bitren</property>
+
+    <!--    <mapping resource="com/exodus/orm/test/entity/Xxx.mapper.xml"></mapping>-->
+    <entity package="com.exodus.orm.test.entity"/>
+</orm-factory>

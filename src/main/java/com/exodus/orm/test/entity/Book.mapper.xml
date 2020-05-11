@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<orm-mapping>
+    <class name="com.exodus.orm.test.entity.Book" table="book">
+        <id name="id" column="bid"/>
+        <property name="name" column="bname"/>
+        <property name="author" column="author"/>
+        <property name="price" column="price"/>
+    </class>
+</orm-mapping>

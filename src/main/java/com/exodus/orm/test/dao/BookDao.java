@@ -26,11 +26,38 @@ public class BookDao {
         ORMSession ormSession = ormConfig.buildORMSession();
         //3.创建实体类对象并保存
         Book book = new Book();
-        book.setId(1);
-        book.setName("Bible");
+        book.setId("2");
+        book.setName("Bible2");
         book.setAuthor("God");
         book.setPrice(1000000);
         ormSession.save(book);
+        //4.释放资源
+        ormSession.closeSession();
+    }
+
+    @Test
+    public void testDelete() throws Exception {
+        //2.创建ORMSession对象
+        ORMSession ormSession = ormConfig.buildORMSession();
+
+        //3.删除对应记录
+        Book book = new Book();
+        book.setId("2");
+        ormSession.delete(book);
+        //4.释放资源
+        ormSession.closeSession();
+    }
+
+    @Test
+    public void testFindOne() throws Exception {
+        //2.创建ORMSession对象
+        ORMSession ormSession = ormConfig.buildORMSession();
+
+        //3.获取id为1的book对象
+        Object book = ormSession.findOne(Book.class, 1);
+        System.out.println(book.toString());
+
+        //4.释放资源
         ormSession.closeSession();
     }
 

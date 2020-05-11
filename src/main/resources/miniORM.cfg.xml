@@ -9,6 +9,6 @@
     <property name="connection.username">root</property>
     <property name="connection.password">bitren</property>
 
-    <!--    <mapping resource="com/exodus/orm/test/entity/Xxx.mapper.xml"></mapping>-->
-    <entity package="com.exodus.orm.test.entity"/>
+    <mapping resource="com/exodus/orm/test/entity/Book.mapper.xml"></mapping>
+<!--    <entity package="com.exodus.orm.test.entity"/>-->
 </orm-factory>

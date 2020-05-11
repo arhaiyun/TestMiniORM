@@ -13,7 +13,7 @@ import com.exodus.orm.annotation.ORMTable;
 public class Book {
     @ORMId
     @ORMColumn(name = "bid")
-    private Integer id;
+    private String id;
 
     @ORMColumn(name = "bname")
     private String name;
@@ -22,13 +22,13 @@ public class Book {
     private String author;
 
     @ORMColumn(name = "price")
-    private double price;
+    private Double price;
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -54,5 +54,15 @@ public class Book {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", author='" + author + '\'' +
+                ", price=" + price +
+                '}';
     }
 }
